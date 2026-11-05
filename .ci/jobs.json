@@ -1,20 +1,21 @@
 {
   "schema": 1,
   "generator": "ccid render v1",
-  "tool_revision": "78a4e05b4e1cb25aaeba3966951564d74277bcbd",
-  "manifest_sha256": "e24a826c5fa8cf1ee8734bf5ae683b70cba25af45ce813b7309b90f3bda65058",
+  "tool_revision": "bd9aff07073185fb0a3503bab331aedefb6d8fd2",
+  "manifest_sha256": "c2fb20b20c2e7b2fb3d2f7d58f3e71d5a8d835ce13e634f96f6c983cd2409ec6",
   "jobs": {
     "verify": {
       "job": "verify",
-      "scheduler": "crow",
+      "scheduler": "forgejo",
       "checks": [
         "rust"
       ],
-      "workflow": "repository-jobs",
+      "workflow": "ci",
       "command": [
         "bash",
         ".ci/run-job.sh"
-      ]
+      ],
+      "runs_on": "heavy"
     }
   }
 }
